@@ -10,9 +10,10 @@ class loginPage {
     get buttonProbUser() {return $('//android.widget.TextView[@text="problem_user"]')}
     get notifGagal() {return $('//android.widget.TextView[@text="Username and password do not match any user in this service."]')}
     get halamanProduct() {return $('//android.widget.TextView[@text="PRODUCTS"]')}
-    
-    
-    
+    get notifGagal2() {return $('//android.widget.TextView[@text="Username is required"]')}
+    get notifGagal3() {return $('//android.widget.TextView[@text="Password is required"]')}
+    get notifGagal4() {return $('//android.widget.TextView[@text="Sorry, this user has been locked out."]')}
+
     //action
     async login1(username,password){
         await this.kolomUserName.setValue(username)
