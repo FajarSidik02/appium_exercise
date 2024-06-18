@@ -1,6 +1,6 @@
 import {$} from '@wdio/globals'
 
-class loginPage {
+class LoginPage {
     //locator
     get kolomUserName() {return $('~test-Username')}
     get kolomPassword() {return $('~test-Password')}
@@ -15,7 +15,7 @@ class loginPage {
     get notifGagal4() {return $('//android.widget.TextView[@text="Sorry, this user has been locked out."]')}
 
     //action
-    async login1(username,password){
+    async login1(username = "",password = ""){
         await this.kolomUserName.setValue(username)
         await this.kolomPassword.setValue(password)
         await this.buttonLogin.click()
@@ -26,4 +26,4 @@ class loginPage {
     }
 
 }
-export default new loginPage
+export default new LoginPage
